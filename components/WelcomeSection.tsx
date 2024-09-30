@@ -17,7 +17,7 @@ export default function WelcomeSection() {
             </div>
 
             <blockquote className="text-2xl italic mb-4 text-blue-900 text-center">
-                "I'm hooked! After only one night on our new mattress I was hooked. It is so comfortable and my back hasn’t felt this good in months! It is firm in all the right places and I love that I can’t feel when my partner rolls around at night."
+            &quot;I&apos;m hooked! After only one night on our new mattress I was hooked. It is so comfortable and my back hasn&apos;t felt this good in months! It is firm in all the right places and I love that I can&apos;t feel when my partner rolls around at night.&quot;
             </blockquote>
             <p className="font-semibold text-blue-900 text-center">- Hannah</p>
         </div>
