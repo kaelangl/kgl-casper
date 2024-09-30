@@ -1,36 +1,13 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Hey folks,
 
-## Getting Started
+Took a crack at this by basically looking at the website, recognizing it was a pretty standard bunch of sales style components, and printed out a version of the page to get breaking down the components on. Once I broke down the components, I built them from top-to-bottom in order.
 
-First, run the development server:
+I built the project using the latest version of Next.js with the modern app router. Stylization was all done with Tailwind CSS for quickness and easy generation and replicability. I am hosting the project on Vercel.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+There were some features I ran out of time on. There should be a modal popup on the right column 3-set of icons for each icon. I didn't implement any cart functionality. On mobile, the four images in my image grid should be added to a horizontal scroll on the main product image. On scroll of the page, the Product Size and cart functionality should float at the top of the page sticky-like so the user can add to cart from anywhere on the page. I left out some of the detail on the folks reviews as well. This was all of this was basically just timing and prioritizing. Wanted to focus on making a full front-end representation of the page.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+There were also some decisions I ended up not being able to make, but wanting to make. Stuff like the icons - would be really easy to just make an icon component with optional text below and above it, and you could just drop that in in a lot of the icon spaces. Same thought with the accordion - really easy to just pass in some parameters to a generic component to have that customizable and reduce repeated code. I also feel this way about the rich text stuff and the callouts in general. In an environment I owned I'd want that all to be more flexible :)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Thanks gang!
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+![alt text](roughoverview.jpg)
