@@ -1,5 +1,7 @@
 'use client';
 
+import Image from 'next/image';
+
 export default function ProductImageGrid() {
   const images = [
     '/images/mattress2.png',
@@ -11,11 +13,13 @@ export default function ProductImageGrid() {
   return (
     <div className="grid grid-cols-2 gap-4 mt-6">
       {images.map((src, index) => (
-        <img
+        <Image
           key={index}
           src={src}
           alt={`Product Image ${index + 2}`}
-          className="w-full h-auto rounded-md"
+          width={500}
+          height={500}
+          className="w-full h-auto rounded-md object-cover"
         />
       ))}
     </div>
