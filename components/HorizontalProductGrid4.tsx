@@ -1,5 +1,7 @@
 'use client';
 
+import Image from 'next/image';
+
 const products = [
   {
     image: '/images/product1.png',
@@ -38,7 +40,13 @@ export default function HorizontalProductGrid4() {
       <div className="flex flex-wrap justify-center gap-4">
         {products.map((product, index) => (
           <div key={index} className="w-64 bg-white p-4 rounded-md">
-            <img src={product.image} alt={product.title} className="w-full h-auto mb-4 rounded-md" />
+            <Image
+              src={product.image}
+              alt={product.title}
+              width={256} 
+              height={256} 
+              className="w-full h-auto mb-4 rounded-md"
+            />
             <div className="text-orange-500 text-sm mb-1">
               {'★'.repeat(Math.floor(product.rating))}
               {product.rating % 1 !== 0 && '☆'} {product.rating}

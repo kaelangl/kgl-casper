@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 
 const tabData = [
   {
@@ -74,9 +75,11 @@ export default function TabbedSection() {
       </div>
 
       <div className="md:w-2/3 mt-4 md:mt-0">
-        <img
+        <Image
           src={tabData[activeTab].image}
           alt={tabData[activeTab].title}
+          width={1200}  // Adjust width as needed
+          height={800}  // Adjust height as needed
           className="w-full h-auto rounded-md"
         />
       </div>

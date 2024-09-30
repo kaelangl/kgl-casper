@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Header() {
@@ -6,7 +7,13 @@ export default function Header() {
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-4">
           <Link href="/">
-            <img src="/images/casper_logo.png" alt="Casper Logo" className="h-8" />
+            <Image
+              src="/images/casper_logo.png"
+              alt="Casper Logo"
+              width={120} // Set a specific width
+              height={40} // Set a specific height to maintain aspect ratio
+              objectFit="contain" // Maintain original dimensions and aspect ratio
+            />
           </Link>
         </div>
 
