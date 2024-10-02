@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
+import { useState } from "react";
 
 export default function ProductOptions() {
-  const [selectedSize, setSelectedSize] = useState('Queen');
+  const [selectedSize, setSelectedSize] = useState("Queen");
 
   const handleSizeChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedSize(event.target.value);
@@ -16,7 +16,10 @@ export default function ProductOptions() {
   return (
     <div className="p-4 mt-4 w-full max-w-lg mx-auto shadow-md bg-white rounded-md">
       <div className="mb-4">
-        <label htmlFor="size-selector" className="block text-md font-medium text-gray-800 mb-2">
+        <label
+          htmlFor="size-selector"
+          className="block text-md font-medium text-gray-800 mb-2"
+        >
           Select your size
         </label>
         <select
@@ -39,7 +42,7 @@ export default function ProductOptions() {
       >
         Add to Cart
       </button>
-      
+
       <p className="text-sm text-green-700 mt-4 flex items-center">
         <span className="inline-block w-2 h-2 bg-green-700 rounded-full mr-2"></span>
         In-stock, ships within 3-5 days | Free shipping & returns

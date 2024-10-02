@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
+import Image from "next/image";
 
 export default function ProductFeatures() {
   return (
@@ -17,13 +17,16 @@ export default function ProductFeatures() {
             <Image
               src="/icons/icon_signaturefoam.svg"
               alt="Signature Foam"
-              width={250}  
-              height={250} 
+              width={250}
+              height={250}
               className="mb-4"
             />
-            <h3 className="text-lg font-semibold text-blue-900">Casper Signature Foam</h3>
+            <h3 className="text-lg font-semibold text-blue-900">
+              Casper Signature Foam
+            </h3>
             <p className="text-gray-700 mt-2">
-              Our uniquely responsive layer of foam is designed to soothe you to sleep with the perfect bit of bounce.
+              Our uniquely responsive layer of foam is designed to soothe you to
+              sleep with the perfect bit of bounce.
             </p>
           </div>
 
@@ -31,13 +34,14 @@ export default function ProductFeatures() {
             <Image
               src="/icons/icon_airscape.svg"
               alt="AirScape Technology"
-              width={125}  
-              height={125} 
+              width={125}
+              height={125}
               className="mb-4"
             />
             <h3 className="text-lg font-semibold text-blue-900">AirScape™</h3>
             <p className="text-gray-700 mt-2">
-              Thousands of perforations in a breathable foam help keep you comfortably cool all night.
+              Thousands of perforations in a breathable foam help keep you
+              comfortably cool all night.
             </p>
           </div>
         </div>

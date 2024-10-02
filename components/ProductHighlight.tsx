@@ -1,18 +1,18 @@
-import Image from 'next/image';
+import Image from "next/image";
 
 export default function ProductHighlight() {
   const products = [
     {
-      name: 'Dawn Mattress',
-      price: 'Starting at $559',
-      image: '/images/dawn-mattress.png',
-      buttonText: 'Shop now',
+      name: "Dawn Mattress",
+      price: "Starting at $559",
+      image: "/images/dawn-mattress.png",
+      buttonText: "Shop now",
     },
     {
-      name: 'Atlas Hybrid Mattress',
-      price: 'Starting at $719',
-      image: '/images/atlas-hybrid-mattress.png',
-      buttonText: 'Shop now',
+      name: "Atlas Hybrid Mattress",
+      price: "Starting at $719",
+      image: "/images/atlas-hybrid-mattress.png",
+      buttonText: "Shop now",
     },
   ];
 
@@ -21,12 +21,12 @@ export default function ProductHighlight() {
       <div className="max-w-8xl mx-auto grid gap-8 grid-cols-1 md:grid-cols-2">
         {products.map((product, index) => (
           <div key={index} className="relative group">
-            <Image 
-              src={product.image} 
-              alt={product.name} 
-              layout="responsive" 
-              width={600} 
-              height={400} 
+            <Image
+              src={product.image}
+              alt={product.name}
+              layout="responsive"
+              width={600}
+              height={400}
               className="rounded-lg"
             />
             <div className="absolute inset-0 bg-black opacity-30 rounded-lg group-hover:opacity-50 transition duration-300"></div>

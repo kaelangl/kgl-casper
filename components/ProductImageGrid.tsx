@@ -1,13 +1,13 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
+import Image from "next/image";
 
 export default function ProductImageGrid() {
   const images = [
-    '/images/mattress2.png',
-    '/images/mattress3.png',
-    '/images/mattress4.png',
-    '/images/mattress5.png',
+    "/images/mattress2.png",
+    "/images/mattress3.png",
+    "/images/mattress4.png",
+    "/images/mattress5.png",
   ];
 
   return (

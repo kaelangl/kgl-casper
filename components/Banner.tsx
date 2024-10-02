@@ -1,20 +1,20 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import Link from 'next/link';
+import { useState, useEffect } from "react";
+import Link from "next/link";
 
 const phrases = [
-  'Enjoy free shipping and easy returns. Rest easy with our 100-night risk-free trial!',
-  'Curious? Our Sleep Specialists are just a call away.',
+  "Enjoy free shipping and easy returns. Rest easy with our 100-night risk-free trial!",
+  "Curious? Our Sleep Specialists are just a call away.",
 ];
 
 export default function Banner() {
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
-  const [countdown, setCountdown] = useState('');
+  const [countdown, setCountdown] = useState("");
 
   useEffect(() => {
     // Banner countdown
-    const targetDate = new Date('2024-10-31T23:59:59');
+    const targetDate = new Date("2024-10-31T23:59:59");
 
     // Function to update the countdown
     const updateCountdown = () => {
@@ -22,16 +22,20 @@ export default function Banner() {
       const difference = targetDate.getTime() - now.getTime();
 
       if (difference <= 0) {
-        setCountdown('Sale ended!');
+        setCountdown("Sale ended!");
         return;
       }
 
       const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const hours = Math.floor(
+        (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+      );
       const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
-      setCountdown(`Fall sale ends in: ${days} Days ${hours} Hours ${minutes} Minutes ${seconds} Seconds`);
+      setCountdown(
+        `Fall sale ends in: ${days} Days ${hours} Hours ${minutes} Minutes ${seconds} Seconds`,
+      );
     };
 
     // Initial call to set the countdown immediately
@@ -47,7 +51,9 @@ export default function Banner() {
   useEffect(() => {
     // Interval to change phrases every 5 seconds
     const interval = setInterval(() => {
-      setCurrentPhraseIndex((prevIndex) => (prevIndex + 1) % (phrases.length + 1)); // Include countdown in rotation
+      setCurrentPhraseIndex(
+        (prevIndex) => (prevIndex + 1) % (phrases.length + 1),
+      ); // Include countdown in rotation
     }, 5000); // Change phrase every 5 seconds
 
     return () => clearInterval(interval);
@@ -55,16 +61,22 @@ export default function Banner() {
 
   // Handler to cycle text forward
   const handleNext = () => {
-    setCurrentPhraseIndex((prevIndex) => (prevIndex + 1) % (phrases.length + 1));
+    setCurrentPhraseIndex(
+      (prevIndex) => (prevIndex + 1) % (phrases.length + 1),
+    );
   };
 
   // Handler to cycle text backward
   const handlePrev = () => {
-    setCurrentPhraseIndex((prevIndex) => (prevIndex - 1 + (phrases.length + 1)) % (phrases.length + 1));
+    setCurrentPhraseIndex(
+      (prevIndex) =>
+        (prevIndex - 1 + (phrases.length + 1)) % (phrases.length + 1),
+    );
   };
 
   // Determine which text to display
-  const displayedText = currentPhraseIndex === 0 ? countdown : phrases[currentPhraseIndex - 1];
+  const displayedText =
+    currentPhraseIndex === 0 ? countdown : phrases[currentPhraseIndex - 1];
 
   return (
     <div className="w-full bg-blue-900 text-white py-2">
@@ -75,9 +87,15 @@ export default function Banner() {
         </div>
 
         {/* Center Section: Rotating Phrases with Arrows */}
-        <div className="flex items-center justify-center space-x-4" style={{ width: '700px' }}>
+        <div
+          className="flex items-center justify-center space-x-4"
+          style={{ width: "700px" }}
+        >
           {/* Previous Arrow */}
-          <button onClick={handlePrev} className="text-white hover:text-gray-300">
+          <button
+            onClick={handlePrev}
+            className="text-white hover:text-gray-300"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-6 w-6"
@@ -86,7 +104,11 @@ export default function Banner() {
               stroke="currentColor"
               strokeWidth={2.5}
             >
-              <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M15 19l-7-7 7-7"
+              />
             </svg>
           </button>
 
@@ -96,7 +118,10 @@ export default function Banner() {
           </div>
 
           {/* Next Arrow */}
-          <button onClick={handleNext} className="text-white hover:text-gray-300">
+          <button
+            onClick={handleNext}
+            className="text-white hover:text-gray-300"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-6 w-6"
@@ -105,14 +130,21 @@ export default function Banner() {
               stroke="currentColor"
               strokeWidth={2.5}
             >
-              <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M9 5l7 7-7 7"
+              />
             </svg>
           </button>
         </div>
 
         {/* Right Section: Find a store with an icon */}
         <div className="text-sm md:text-base flex items-center">
-          <Link href="/find-store" className="hover:underline flex items-center">
+          <Link
+            href="/find-store"
+            className="hover:underline flex items-center"
+          >
             <span>Find a store</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
